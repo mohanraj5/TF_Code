@@ -46,7 +46,7 @@ provider "aws" {
  }
 resource "aws_instance" "web" {
   ami           = "ami-002f6e91abff6eb91"
-  instance_type = "t2.nano"
+  instance_type = "t2.micro"
   user_data = <<-EOF
               #!/bin/bash
               hostnamectl set-hostname ${local.generated_hostname}
